@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import CompanyLogo from './components/CompanyLogo';
 import PurposeSection from './components/PurposeSection';
 import FeaturesSections from './components/FeaturesSections';
+import ScheduleSection from './components/ScheduleSection';
+import MonitorSEction from './components/MonitorSEction';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <CompanyLogo />
         <PurposeSection />
         <FeaturesSections />
+        <ScheduleSection />
+        <MonitorSEction />
       </div>
     </main>
   );
