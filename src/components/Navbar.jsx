@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../ultils/motions';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +15,11 @@ function Navbar() {
   ];
 
   return (
-    <nav
+    <motion.nav
+      variants={fadeIn('down', 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
       className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b
      border-gray-100 shadow-sm"
     >
@@ -100,7 +106,7 @@ function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 }
 
